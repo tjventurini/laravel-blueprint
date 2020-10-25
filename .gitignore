@@ -13,3 +13,4 @@ yarn-error.log
 /.laradock
 /.vscode
 *.code-workspace
+_lighthouse_ide_helper.php
