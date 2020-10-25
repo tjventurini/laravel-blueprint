@@ -26,10 +26,17 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
-            ItemMenu::label('Documentation')
+            // documentation
+            ItemMenu::label('Laravel')
                 ->title('Docs')
                 ->icon('docs')
+                ->url('https://laravel.com/docs'),
+            ItemMenu::label('Orchid')
+                ->icon('docs')
                 ->url('https://orchid.software/en/docs'),
+            ItemMenu::label('Laradock')
+                ->icon('docs')
+                ->url('https://laradock.io/docs'),
         ];
     }
 
