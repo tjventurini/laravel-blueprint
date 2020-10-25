@@ -8,10 +8,8 @@ title: Getting Started
 
 To start a new project based on this repository, you should do a fork of it. So for the following, you will have to replace the repository url `git@github.com:tjventurini/laravel-blueprint.git` with your own.
 
-To install this blueprint you need to clone this repository.
-
 ```
-git clone git@github.com:tjventurini/laravel-blueprint.git
+git clone --recursive git@github.com:tjventurini/laravel-blueprint.git
 ```
 
 Now copy the environment file of the laradock setup.
