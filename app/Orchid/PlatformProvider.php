@@ -30,22 +30,27 @@ class PlatformProvider extends OrchidServiceProvider
             ItemMenu::label('Telescope')
                 ->title('Debugging')
                 ->icon('magnifier')
-                ->url('/telescope'),
+                ->url('/telescope')
+                ->permission('platform.telescope'),
 
             // documentation
             ItemMenu::label('Blueprint')
                 ->title('Docs') // section title
                 ->icon('docs')
-                ->url('https://github.com/tjventurini/laravel-blueprint'),
+                ->url('https://github.com/tjventurini/laravel-blueprint')
+                ->permission('platform.docs'),
             ItemMenu::label('Laravel')
                 ->icon('docs')
-                ->url('https://laravel.com/docs'),
+                ->url('https://laravel.com/docs')
+                ->permission('platform.docs'),
             ItemMenu::label('Orchid')
                 ->icon('docs')
-                ->url('https://orchid.software/en/docs'),
+                ->url('https://orchid.software/en/docs')
+                ->permission('docs'),
             ItemMenu::label('Laradock')
                 ->icon('docs')
-                ->url('https://laradock.io/docs'),
+                ->url('https://laradock.io/docs')
+                ->permission('platform.docs'),
         ];
     }
 

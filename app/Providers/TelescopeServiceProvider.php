@@ -10,6 +10,11 @@ use Laravel\Telescope\TelescopeApplicationServiceProvider;
 class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
 {
     /**
+     * Permisison to use this service.
+     */
+    const PERMISSION = 'platform.telescope';
+
+    /**
      * Register any application services.
      *
      * @return void
@@ -63,7 +68,7 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewTelescope', function ($user) {
-            return $user->hasAccess('telescope');
+            return $user->hasAccess(self::PERMISSION);
         });
     }
 }
