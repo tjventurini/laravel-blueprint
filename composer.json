@@ -1,10 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "tjventurini/laravel-blueprint",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Laravel blueprint to speed up development.",
     "keywords": [
         "framework",
-        "laravel"
+        "laravel",
+        "blueprint"
     ],
     "license": "MIT",
     "require": {
