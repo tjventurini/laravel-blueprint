@@ -107,3 +107,9 @@ The `composer install` command is set up to run the setup for the whole applicat
 ```
 php artisan app:install --refresh --seed --demo
 ```
+
+## Documentation
+
+Further documentation of this repository can be found in the docs.
+
+<!-- - [Documentation]() -->
