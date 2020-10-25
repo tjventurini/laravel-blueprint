@@ -27,8 +27,11 @@ class PlatformProvider extends OrchidServiceProvider
     {
         return [
             // documentation
+            ItemMenu::label('Blueprint')
+                ->title('Docs') // section title
+                ->icon('docs')
+                ->url('https://github.com/tjventurini/laravel-blueprint'),
             ItemMenu::label('Laravel')
-                ->title('Docs')
                 ->icon('docs')
                 ->url('https://laravel.com/docs'),
             ItemMenu::label('Orchid')
