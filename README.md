@@ -53,6 +53,12 @@ This will directly bring you to the location of your laravel application. Now it
 composer install
 ```
 
+The `composer install` command is set up to run the setup for the whole application. If you want to run it manually agian, then you can either run `composer install` again or run the following artisan command.
+
+```
+php artisan app:install --refresh --seed --demo
+```
+
 ## Upgrade
 
 To upgrade your forked project you have to run the following commands from within your applications root.
@@ -93,3 +99,11 @@ PASSWORD: password
 ```
 
 This user has the admin user role applied to it and all permissions available per default.
+
+### Run Setup
+
+The `composer install` command is set up to run the setup for the whole application. If you want to run it manually agian, then you can either run `composer install` again or run the following artisan command.
+
+```
+php artisan app:install --refresh --seed --demo
+```
