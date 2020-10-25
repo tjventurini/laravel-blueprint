@@ -15,7 +15,9 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "nuwave/lighthouse": "^4.17",
-        "orchid/platform": "^9.7"
+        "orchid/platform": "^9.7",
+        "laravel/telescope": "^4.2",
+        "tjventurini/ddi": "^0.0.6"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
@@ -29,11 +31,6 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
     },
     "autoload": {
         "psr-4": {

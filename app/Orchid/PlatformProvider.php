@@ -26,6 +26,12 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
+            // debugging
+            ItemMenu::label('Telescope')
+                ->title('Debugging')
+                ->icon('magnifier')
+                ->url('/telescope'),
+
             // documentation
             ItemMenu::label('Blueprint')
                 ->title('Docs') // section title

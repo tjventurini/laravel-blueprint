@@ -9,6 +9,8 @@ This laravel blueprint has the following features / packages included.
 - [Laradock](https://laradock.io)
 - [Lighthouse](https://lighthouse-php.com) for GraphQL
 - [Orchid](https://orchid.software/) as admin panel
+- [Telescope](https://laravel.com/docs/telescope) for debugging
+- xDebug to debug your Laravel application
 
 ## Installation
 
@@ -80,10 +82,14 @@ If you want to access your local project under a specific url you can add an ent
 127.0.0.1 laravel-blueprint.local
 ```
 
-### Create Admin User
+### Login to Dashboard
 
-To create a admin user you can execute the following command.
+There is a default admin user available that you can use to login to the dashboard.
 
 ```
-php artisan orchid:admin admin admin@admin.com password
+URL: http://laravel-blueprint.local/admin/login
+USER: admin@admin.com
+PASSWORD: password
 ```
+
+This user has the admin user role applied to it and all permissions available per default.
