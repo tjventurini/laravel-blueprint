@@ -1,16 +1,8 @@
-# Laravel Blueprint 🚀
+---
+title: Getting Started
+---
 
-This laravel blueprint intends to speed up your development.
-
-## Features
-
-This laravel blueprint has the following features / packages included.
-
-- [Laradock](https://laradock.io)
-- [Lighthouse](https://lighthouse-php.com) for GraphQL
-- [Orchid](https://orchid.software/) as admin panel
-- [Telescope](https://laravel.com/docs/telescope) for debugging
-- xDebug to debug your Laravel application
+# {{ $frontmatter.title }}
 
 ## Installation
 
@@ -112,4 +104,4 @@ php artisan app:install --refresh --seed --demo
 
 Further documentation of this repository can be found in the docs.
 
-- [Documentation](https://tjventurini.github.io/laravel-blueprint/)
+- [Documentation](/laravel-blueprint/docs)

@@ -1,4 +1,8 @@
-# Laravel Blueprint 🚀
+---
+title: Laravel Blueprint 🚀
+---
+
+# {{ $frontmatter.title }}
 
 This laravel blueprint intends to speed up your development.
 
@@ -108,8 +112,10 @@ The `composer install` command is set up to run the setup for the whole applicat
 php artisan app:install --refresh --seed --demo
 ```
 
-## Documentation
+## Advanced
 
-Further documentation of this repository can be found in the docs.
+### Package Development
 
-- [Documentation](https://tjventurini.github.io/laravel-blueprint/)
+Check out the following page if you want to use Laravel Blueprint for local package development.
+
+- [Package Development](/docs/package-development/)
