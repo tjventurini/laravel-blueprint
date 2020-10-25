@@ -112,4 +112,4 @@ php artisan app:install --refresh --seed --demo
 
 Further documentation of this repository can be found in the docs.
 
-<!-- - [Documentation]() -->
+- [Documentation](https://tjventurini.github.io/laravel-blueprint/)
