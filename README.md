@@ -12,6 +12,8 @@ This laravel blueprint has the following features / packages included.
 
 ## Installation
 
+To start a new project based on this repository, you should do a fork of it. So for the following, you will have to replace the repository url `git@github.com:tjventurini/laravel-blueprint.git` with your own.
+
 To install this blueprint you need to clone this repository.
 
 ```
@@ -47,4 +49,41 @@ This will directly bring you to the location of your laravel application. Now it
 
 ```
 composer install
+```
+
+## Upgrade
+
+To upgrade your forked project you have to run the following commands from within your applications root.
+
+```
+# add parent repository as blueprint
+git remote add blueprint git@github.com:tjventurini/laravel-blueprint.git
+
+# fetch branches
+git fetch blueprint
+
+# checkout your own main branch (probably master)
+git checkout main
+
+# merge in changes
+git merge blueprint/main
+# you can also use rebase here
+```
+
+## Usage
+
+### Development URL
+
+If you want to access your local project under a specific url you can add an entry like the following to your hosts file.
+
+```
+127.0.0.1 laravel-blueprint.local
+```
+
+### Create Admin User
+
+To create a admin user you can execute the following command.
+
+```
+php artisan orchid:admin admin admin@admin.com password
 ```
