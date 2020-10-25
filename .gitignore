@@ -18,7 +18,3 @@ programmatic-types.graphql
 /docs/.vuepress/
 !/docs/.vuepress/config.js
 !/docs/.vuepress/public/
-!/docs/.vuepress/public/*.png
-!/docs/.vuepress/public/*.jpg
-!/docs/.vuepress/public/*.jpeg
-!/docs/.vuepress/public/*.pdf
