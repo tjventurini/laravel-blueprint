@@ -26,14 +26,6 @@ Then you should go ahead and update the laradock configuration. Make sure to upd
 vim laravel-blueprint/laradock/.env
 ```
 
-Next you will need to add the following volume to the `workspace` and `php-fpm` containers. You can add it in the regarding sections of your `laradock/docker-composer.yml` file.
-
-```
-    volumes:
-        # ...
-        - ../../packages:/var/packages
-```
-
 Now it is time to boot up laradock. Your first boot can take some time since the docker containers need to be build.
 
 ```
@@ -59,6 +51,24 @@ The `composer install` command is set up to run the setup for the whole applicat
 php artisan app:install --refresh --seed --demo
 ```
 
+## Add Volume for Packages
+
+Next you will need to add the following volume to the `workspace` and `php-fpm` containers. You can add it in the regarding sections of your `laradock/docker-composer.yml` file.
+
+```
+    volumes:
+        # ...
+        - ../../packages:/var/packages
+```
+
+Now you will have to rebuild the containers.
+
+```
+docker-compose build php-fpm workspace
+```
+
+## Adding your Development Package
+
 Next you will need to create a composer repository that you want to include. Go to your `packages` directory and create it there. Then you will have to update your `composer.json` in your package development instance. This could look like the following.
 
 ```
@@ -77,3 +87,7 @@ composer require your-name/your-package @dev
 ```
 
 This should create a symlink for your package in the vendors folder.
+
+## IDE Configuration
+
+Remember that you should include another folder to the project/workspace of your IDE. I suggest that you add your vendor name directory from the vendors folder so your _inteli_ services don't make your IDE light up red all over the place 😉

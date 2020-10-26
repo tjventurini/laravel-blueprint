@@ -114,6 +114,12 @@ php artisan app:install --refresh --seed --demo
 
 ## Advanced
 
+### xDebug
+
+Checkout the following page if you want to use xdebug to debug your application.
+
+- [xDebug](/docs/xdebug/)
+
 ### Package Development
 
 Check out the following page if you want to use Laravel Blueprint for local package development.

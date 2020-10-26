@@ -14,11 +14,12 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
+        "laravel/telescope": "^4.2",
         "laravel/tinker": "^2.0",
         "nuwave/lighthouse": "^4.17",
         "orchid/platform": "^9.7",
-        "laravel/telescope": "^4.2",
-        "tjventurini/ddi": "^0.0.6"
+        "tjventurini/ddi": "^1.0.0",
+        "tjventurini/graphql-exceptions": "^0.0.2"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
