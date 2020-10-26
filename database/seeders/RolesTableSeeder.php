@@ -20,13 +20,13 @@ class RolesTableSeeder extends Seeder
         ], [
             'name' => 'Admin',
             'permissions' => [
-                'platform.index' => '1',
-                'platform.systems.index' => '1',
-                'platform.systems.roles' => '1',
-                'platform.systems.users' => '1',
-                'platform.systems.attachment' => '1',
-                TelescopeServiceProvider::PERMISSION => '1',
-                'platform.docs' => '1'
+                'platform.index' => 1,
+                'platform.systems.index' => 1,
+                'platform.systems.roles' => 1,
+                'platform.systems.users' => 1,
+                'platform.systems.attachment' => 1,
+                TelescopeServiceProvider::PERMISSION => 1,
+                'platform.docs' => 1
             ]
         ]);
     }

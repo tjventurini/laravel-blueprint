@@ -46,7 +46,7 @@ class PlatformProvider extends OrchidServiceProvider
             ItemMenu::label('Orchid')
                 ->icon('docs')
                 ->url('https://orchid.software/en/docs')
-                ->permission('docs'),
+                ->permission('platform.docs'),
             ItemMenu::label('Laradock')
                 ->icon('docs')
                 ->url('https://laradock.io/docs')
@@ -105,7 +105,9 @@ class PlatformProvider extends OrchidServiceProvider
         return [
             ItemPermission::group(__('Systems'))
                 ->addPermission('platform.systems.roles', __('Roles'))
-                ->addPermission('platform.systems.users', __('Users')),
+                ->addPermission('platform.systems.users', __('Users'))
+                ->addPermission('platform.docs', __('Documentation'))
+                ->addPermission('platform.telescope', __('Telescope')),
         ];
     }
 
