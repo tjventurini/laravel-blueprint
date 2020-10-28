@@ -21,8 +21,8 @@ init:
 	@sleep $(WAITING_TIME)
 	@cd ./laradock && docker-compose exec --user=laradock workspace composer install
 	@echo "The laravel-blueprint setup is up and running 🚀"
-# update the project 
-update: 
+# upgrade the project 
+upgrade: 
 	@git remote add blueprint git@github.com:tjventurini/laravel-blueprint.git
 	@git fetch blueprint
 	@git checkout $(UPDATE_MAIN_BRANCH)
@@ -69,6 +69,12 @@ refresh:
 	@sleep $(WAITING_TIME)
 	@cd ./laradock && docker-compose exec --user=laradock workspace composer install
 	@echo "The laravel-blueprint setup is up and running 🚀"
+# render docs using vuepress 
+docs-build:
+	@cd ./docs && ./deploy.sh
+# render docs using vuepress dev
+docs-watch:
+	@cd ./docs && vuepress dev
 
 ########################################
 # other

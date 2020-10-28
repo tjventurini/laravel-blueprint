@@ -42,21 +42,10 @@ This will build and start the containers, and execute `composer install` in the 
 
 ## Upgrade
 
-To upgrade your forked project you have to run the following commands from within your applications root.
+To upgrade your project against the laravel-blueprint, you can run the following command.
 
 ```
-# add parent repository as blueprint
-git remote add blueprint git@github.com:tjventurini/laravel-blueprint.git
-
-# fetch branches
-git fetch blueprint
-
-# checkout your own main branch (probably master)
-git checkout main
-
-# merge in changes
-git merge blueprint/main
-# you can also use rebase here
+make upgrade
 ```
 
 ## Usage

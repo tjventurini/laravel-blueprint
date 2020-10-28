@@ -8,10 +8,6 @@ title: Getting Started
 
 To start a new project based on this repository, you should do a fork of it. So for the following, you will have to replace the repository url `git@github.com:tjventurini/laravel-blueprint.git` with your own.
 
-```
-git clone --recursive git@github.com:tjventurini/laravel-blueprint.git
-```
-
 To install this blueprint you need to clone this repository.
 
 ```
@@ -41,7 +37,7 @@ This will build and start the containers, and execute `composer install` in the 
 To upgrade your project against the laravel-blueprint, you can run the following command.
 
 ```
-make update
+make upgrade
 ```
 
 ## Usage
