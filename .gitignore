@@ -15,6 +15,6 @@ yarn-error.log
 *.code-workspace
 _lighthouse_ide_helper.php
 programmatic-types.graphql
-/docs/.vuepress/
-!/docs/.vuepress/config.js
+/docs/.vuepress/*
 !/docs/.vuepress/public/
+!/docs/.vuepress/config.js
