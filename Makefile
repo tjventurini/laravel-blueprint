@@ -1,15 +1,22 @@
 ########################################
+# variables
+CONTAINERS="nginx php-fpm mysql workspace"
+
+########################################
 # setup
 # initialize the project
-# init:
-	# TODO: move setup commands in here 
+init:
+	@git submodule init 
+	@git submodule update
 
 ########################################
 # laradock
 
+build:
+	@cd ./laradock && docker-compose build $(CONTAINERS)
 # start the laradock setup
 up:
-	@cd ./laradock && docker-compose up -d nginx php-fpm mysql workspace
+	@cd ./laradock && docker-compose up -d $(CONTAINERS)
 # stop the laradock setup
 stop:
 	@cd ./laradock && docker-compose stop
@@ -21,4 +28,18 @@ bash:
 	@cd ./laradock && docker-compose exec --user=laradock workspace bash
 # execute any command using docker-compose 
 dc: 
-	@echo ...
+	@cd ./laradock && docker-compose $(filter-out $@,$(MAKECMDGOALS))
+
+
+
+
+
+
+
+
+#####################
+# other
+
+# catch any not matching tasks in order to make the `dc` command work
+%:
+	@:
