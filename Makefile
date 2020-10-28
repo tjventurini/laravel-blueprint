@@ -1,25 +1,37 @@
 ########################################
 # variables
+#
+# the list of containers to work with
 CONTAINERS=nginx php-fpm mysql workspace
+# the branch to pull updates form
+UPDATE_MAIN_BRANCH=master
+# time that we give the containers to boot before we proceed with the setup 
+WAITING_TIME=10
 
 ########################################
-# setup
+# repository
+#
 # initialize the project
 init:
 	@git submodule init # initialize laradock-blueprint repository
 	@git submodule update # actually fetch the content of laradock-blueprint
-	# @echo "What is your project slug? (eg. laravel_blueprint)" && read PROJECT_NAME
-	# TODO collect other variables 
-	# TODO replace the variables in the .env.docker.example file before copying it to laradock/.env
 	@cp .env.docker.example ./laradock/.env
 	@cd ./laradock && docker-compose up -d $(CONTAINERS)
-	@sleep 30
+	@echo "Giving containers some time to boot before we continue ... ⌚"
+	@sleep $(WAITING_TIME)
 	@cd ./laradock && docker-compose exec --user=laradock workspace composer install
 	@echo "The laravel-blueprint setup is up and running 🚀"
+# update the project 
+update: 
+	@git remote add blueprint git@github.com:tjventurini/laravel-blueprint.git
+	@git fetch blueprint
+	@git checkout $(UPDATE_MAIN_BRANCH)
+	@git merge blueprint/$(UPDATE_MAIN_BRANCH)
 
 ########################################
 # laradock
-
+#
+# build containers
 build:
 	@cd ./laradock && docker-compose build $(CONTAINERS)
 # start the laradock setup
@@ -38,9 +50,29 @@ bash:
 dc: 
 	@cd ./laradock && docker-compose $(filter-out $@,$(MAKECMDGOALS))
 
-#####################
-# other
+########################################
+# application 
+#
+# update project dependencies
+composer-update:
+	@cd ./laradock && docker-compose exec --user=laradock workspace composer cc && docker-compose exec --user=laradock workspace composer update
+# dump composer autoload
+composer-dump:
+	@cd ./laradock && docker-compose exec --user=laradock workspace composer dump
+# refresh the application
+refresh:
+	@cd ./laradock && docker-compose down
+	@echo "We need sudo permissions to delete the `.laradock` data folder 🔐"
+	sudo rm -rf ./.laradock
+	@cd ./laradock && docker-compose up -d $(CONTAINERS)
+	@echo "Giving containers some time to boot before we continue ... ⌚"
+	@sleep $(WAITING_TIME)
+	@cd ./laradock && docker-compose exec --user=laradock workspace composer install
+	@echo "The laravel-blueprint setup is up and running 🚀"
 
+########################################
+# other
+#
 # catch any not matching tasks in order to make the `dc` command work
 %:
 	@:

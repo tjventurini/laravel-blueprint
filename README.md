@@ -22,42 +22,23 @@ To install this blueprint you need to clone this repository.
 git clone --recursive git@github.com:tjventurini/laravel-blueprint.git
 ```
 
-Now copy the environment file of the laradock setup.
+Then you should go ahead and update the laradock configuration in your project in `.env.docker.example`. Make sure to update the `DATA_PATH_HOST` and `COMPOSE_PROJECT_NAME` environment variables. Also you will have to set the `UID`s and `GID`s that match your host systems. You can find them out by running `id -a`.
+
+Also make sure to update the `Makefile` of this project. You might need to update the `CONTAINERS` variable at the top of the file to specify the list of containers that you want to start for your project.
 
 ```
-cp laravel-blueprint/laradock/.env.example laravel-blueprint/laradock/.env
+########################################
+# variables
+CONTAINERS=nginx php-fpm mysql workspace
 ```
 
-Then you should go ahead and update the laradock configuration. Make sure to update the `DATA_PATH_HOST` and `COMPOSE_PROJECT_NAME` environment variables. Also you will have to set the `UID`s and `GID`s that match your host systems. You can find them out by running `id -a`.
+Now you are ready to execute the setup from the make file.
 
 ```
-vim laravel-blueprint/laradock/.env
+make init
 ```
 
-Now it is time to boot up laradock. Your first boot can take some time since the docker containers need to be build.
-
-```
-cd laradock
-docker-composer -d nginx php-fpm mysql workspace
-```
-
-Now you are ready to login to the laravel container using `zsh`.
-
-```
-docker-compose exec --user=laradock workspace zsh
-```
-
-This will directly bring you to the location of your laravel application. Now it's time to install the composer dependencies and to generate the application key. Composer is set to do this automatically after installation, so all what's left to do is to run the following well know command.
-
-```
-composer install
-```
-
-The `composer install` command is set up to run the setup for the whole application. If you want to run it manually agian, then you can either run `composer install` again or run the following artisan command.
-
-```
-php artisan app:install --refresh --seed --demo
-```
+This will build and start the containers, and execute `composer install` in the `workspace` container. So basically you are done 😁
 
 ## Upgrade
 
