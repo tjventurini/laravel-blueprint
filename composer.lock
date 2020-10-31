@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70cb720a6baa3ce50b0f131875b88af4",
+    "content-hash": "ae9ba0cb3675693e843526a445039f86",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1059,6 +1059,65 @@
                 "search"
             ],
             "time": "2020-10-20T18:44:35+00:00"
+        },
+        {
+            "name": "laravel/telescope",
+            "version": "v4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/telescope.git",
+                "reference": "86665787a7183f85d9e4551ec059f239e48af89c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/86665787a7183f85d9e4551ec059f239e48af89c",
+                "reference": "86665787a7183f85d9e4551ec059f239e48af89c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": "^8.0",
+                "php": "^7.3",
+                "symfony/var-dumper": "^5.0"
+            },
+            "require-dev": {
+                "ext-gd": "*",
+                "orchestra/testbench": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Telescope\\TelescopeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Telescope\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Mohamed Said",
+                    "email": "mohamed@laravel.com"
+                }
+            ],
+            "description": "An elegant debug assistant for the Laravel framework.",
+            "keywords": [
+                "debugging",
+                "laravel",
+                "monitoring"
+            ],
+            "time": "2020-10-20T19:07:01+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -4949,17 +5008,11 @@
         },
         {
             "name": "tjventurini/ddi",
-            "version": "v0.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tjventurini/ddi.git",
-                "reference": "ba2e987fc0f74f6132c87d4afd12406b9d359e20"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tjventurini/ddi/zipball/ba2e987fc0f74f6132c87d4afd12406b9d359e20",
-                "reference": "ba2e987fc0f74f6132c87d4afd12406b9d359e20",
-                "shasum": ""
+                "type": "path",
+                "url": "../packages/ddi",
+                "reference": "1b72b12ee517a52af94e5701ab6adc7d3b7ca3e6"
             },
             "require": {
                 "illuminate/support": "^6.0|^7.0|^8.0"
@@ -4970,7 +5023,48 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Venturini",
+                    "email": "thomas@venturini.codes"
+                },
+                {
+                    "name": "Sean Moghadam",
+                    "email": "sean@du.digital"
+                }
+            ],
+            "description": "Helper to dd with more comfort.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "tjventurini/graphql-exceptions",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../packages/graphql-exceptions",
+                "reference": "a49cdbeefea33a8dab894244fb9dd30ee108fadd"
+            },
+            "require": {
+                "illuminate/support": "^6.0|^7.0|^8.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tjventurini\\GraphQLExceptions\\GraphQLExceptionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tjventurini\\GraphQLExceptions\\": "src/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -4980,8 +5074,10 @@
                     "email": "thomas@venturini.codes"
                 }
             ],
-            "description": "Helper to dd with more comfort.",
-            "time": "2020-10-25T14:17:20+00:00"
+            "description": "Client save exceptions for lighthouse-php graphql implementation.",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5702,65 +5798,6 @@
             ],
             "description": "A library that can provide of a list of classes in a given namespace",
             "time": "2020-04-20T17:38:50+00:00"
-        },
-        {
-            "name": "laravel/telescope",
-            "version": "v4.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/telescope.git",
-                "reference": "86665787a7183f85d9e4551ec059f239e48af89c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/86665787a7183f85d9e4551ec059f239e48af89c",
-                "reference": "86665787a7183f85d9e4551ec059f239e48af89c",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "laravel/framework": "^8.0",
-                "php": "^7.3",
-                "symfony/var-dumper": "^5.0"
-            },
-            "require-dev": {
-                "ext-gd": "*",
-                "orchestra/testbench": "^6.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Telescope\\TelescopeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Telescope\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                },
-                {
-                    "name": "Mohamed Said",
-                    "email": "mohamed@laravel.com"
-                }
-            ],
-            "description": "An elegant debug assistant for the Laravel framework.",
-            "keywords": [
-                "debugging",
-                "laravel",
-                "monitoring"
-            ],
-            "time": "2020-10-20T19:07:01+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -7750,7 +7787,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "tjventurini/ddi": 20,
+        "tjventurini/graphql-exceptions": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
