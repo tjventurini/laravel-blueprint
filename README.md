@@ -22,6 +22,15 @@ To install this blueprint you need to clone this repository.
 git clone --recursive git@github.com:tjventurini/laravel-blueprint.git
 ```
 
+If you have not forked this project yet, but are still using this project as a starting point for your own, you should rename the current remote `origin` from git to `blueprint` and add your own.
+
+```
+git remote rename origin blueprint
+git rename add origin <your-git-repo-reference>
+```
+
+Note: This is important to keep the git-history in tact and to make things upgrade able against this project. See the upgrade section of this document or checkout the documentation.
+
 Then you should go ahead and update the laradock configuration in your project in `.env.docker.example`. Make sure to update the `DATA_PATH_HOST` and `COMPOSE_PROJECT_NAME` environment variables. Also you will have to set the `UID`s and `GID`s that match your host systems. You can find them out by running `id -a`.
 
 Also make sure to update the `Makefile` of this project. You might need to update the `CONTAINERS` variable at the top of the file to specify the list of containers that you want to start for your project.
