@@ -25,8 +25,9 @@ git clone --recursive git@github.com:tjventurini/laravel-blueprint.git
 If you have not forked this project yet, but are still using this project as a starting point for your own, you should rename the current remote `origin` from git to `blueprint` and add your own.
 
 ```
-git remote rename origin blueprint
-git rename add origin <your-git-repo-reference>
+git remote rename origin blueprint # rename the source
+git rename add origin <your-git-repo-reference> # add your own as origin
+git push --set-upstream origin master # make sure you push to the right one
 ```
 
 Note: This is important to keep the git-history in tact and to make things upgrade able against this project. See the upgrade section of this document or checkout the documentation.
