@@ -26,7 +26,7 @@ If you have not forked this project yet, but are still using this project as a s
 
 ```
 git remote rename origin blueprint # rename the source
-git rename add origin <your-git-repo-reference> # add your own as origin
+git add origin <your-git-repo-reference> # add your own as origin
 git push --set-upstream origin master # make sure you push to the right one
 ```
 
