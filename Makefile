@@ -40,6 +40,9 @@ up:
 # stop the laradock setup
 stop:
 	@cd ./laradock && docker-compose stop
+# stop and remove the laradock containers
+down:
+	@cd ./laradock && docker-compose down
 # access the workspace using zsh
 zsh: 
 	@cd ./laradock && docker-compose exec --user=laradock workspace zsh
