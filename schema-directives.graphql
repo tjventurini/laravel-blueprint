@@ -723,6 +723,23 @@ directive @morphTo(
   scopes: [String!]
 ) on FIELD_DEFINITION
 
+# Directive class: Nuwave\Lighthouse\Schema\Directives\MorphToManyDirective
+"""
+Corresponds to [Eloquent's ManyToMany-Relationship](https://laravel.com/docs/eloquent-relationships#many-to-many-polymorphic-relations).
+"""
+directive @morphToMany(
+  """
+  Specify the relationship method name in the model class,
+  if it is named different from the field in the schema.
+  """
+  relation: String
+
+  """
+  Apply scopes to the underlying query.
+  """
+  scopes: [String!]
+) on FIELD_DEFINITION
+
 # Directive class: Nuwave\Lighthouse\Schema\Directives\NamespaceDirective
 """
 Redefine the default namespaces used in other directives.
