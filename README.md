@@ -11,6 +11,7 @@ This laravel blueprint has the following features / packages included.
 - [Orchid](https://orchid.software/) as admin panel
 - [Telescope](https://laravel.com/docs/telescope) for debugging
 - xDebug to debug your Laravel application
+- Setup for [Sentry](https://sentry.io)
 
 ## Installation
 
