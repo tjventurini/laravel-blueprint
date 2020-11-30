@@ -101,4 +101,4 @@ Check out the following page if you want to use Laravel Blueprint for local pack
 
 The blueprint comes with a setup for sentry and includes client save graphql exceptions. Check out the documentation to learn more about it.
 
-- [Exception Handling](/docs/docs/exception-handling/)
+- [Exception Handling](/docs/exception-handling/)
