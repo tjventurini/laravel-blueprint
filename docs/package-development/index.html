@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Package Development | Laravel Blueprint</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Laravel blueprint to speed up development.">
+    
+    <link rel="preload" href="/laravel-blueprint/assets/css/0.styles.594e6019.css" as="style"><link rel="preload" href="/laravel-blueprint/assets/js/app.0033eac8.js" as="script"><link rel="preload" href="/laravel-blueprint/assets/js/2.b1f69f24.js" as="script"><link rel="preload" href="/laravel-blueprint/assets/js/10.199ee8ed.js" as="script"><link rel="prefetch" href="/laravel-blueprint/assets/js/11.587acf1d.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/12.337e740c.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/3.45723179.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/4.d8f9ed04.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/5.42df1c58.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/6.c748b5f1.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/7.b79e6b3f.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/8.79ee2a7b.js"><link rel="prefetch" href="/laravel-blueprint/assets/js/9.859981fe.js">
+    <link rel="stylesheet" href="/laravel-blueprint/assets/css/0.styles.594e6019.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/laravel-blueprint/" class="home-link router-link-active"><!----> <span class="site-name">Laravel Blueprint</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/laravel-blueprint/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/laravel-blueprint/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/laravel-blueprint/docs/" class="nav-link router-link-active">
+  Docs
+</a></div><div class="nav-item"><a href="https://github.com/tjventurini/laravel-blueprint" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/laravel-blueprint/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/laravel-blueprint/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/laravel-blueprint/docs/" class="nav-link router-link-active">
+  Docs
+</a></div><div class="nav-item"><a href="https://github.com/tjventurini/laravel-blueprint" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Package Development</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/laravel-blueprint/docs/package-development/#installation" class="sidebar-link">Installation</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/laravel-blueprint/docs/package-development/#add-volume-for-packages" class="sidebar-link">Add Volume for Packages</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/laravel-blueprint/docs/package-development/#adding-your-development-package" class="sidebar-link">Adding your Development Package</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/laravel-blueprint/docs/package-development/#ide-configuration" class="sidebar-link">IDE Configuration</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="frontmatter-title"><a href="#frontmatter-title" class="header-anchor">#</a> Package Development</h1> <p>Using <a href="https://github.com/tjventurini/laravel-blueprint" target="_blank" rel="noopener noreferrer">Laravel Blueprint<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> for package development is easy. Just follow the very easy steps below and you are good to go.</p> <h2 id="installation"><a href="#installation" class="header-anchor">#</a> Installation</h2> <p>Follow the steps shown in the <a href="/laravel-blueprint/guide/">quickstart guide</a> or in the <a href="/laravel-blueprint/docs/" class="router-link-active">docs</a> to install the laravel-blueprint.</p> <h2 id="add-volume-for-packages"><a href="#add-volume-for-packages" class="header-anchor">#</a> Add Volume for Packages</h2> <p>You will need to add the following volume to the <code>workspace</code> and <code>php-fpm</code> containers. You can add it in the regarding sections of your <code>laradock/docker-composer.yml</code> file.</p> <div class="language- extra-class"><pre class="language-text"><code>    volumes:
+        # ...
+        - ../../packages:/var/packages
+</code></pre></div><p>Now you will have to rebuild the containers.</p> <div class="language- extra-class"><pre class="language-text"><code>make build
+</code></pre></div><h2 id="adding-your-development-package"><a href="#adding-your-development-package" class="header-anchor">#</a> Adding your Development Package</h2> <p>You will need to create a composer repository that you want to include. Go to your <code>packages</code> directory and create it there. Then you will have to update your <code>composer.json</code> in your package development instance. This could look like the following.</p> <div class="language- extra-class"><pre class="language-text"><code>    &quot;repositories&quot;: [
+        {
+            &quot;type&quot;: &quot;path&quot;,
+            &quot;url&quot;: &quot;../packages/my-package&quot;
+        }
+    ],
+</code></pre></div><p>Then you can run the following to install it.</p> <div class="language- extra-class"><pre class="language-text"><code>composer require your-name/your-package @dev
+</code></pre></div><p>This should create a symlink for your package in the vendors folder.</p> <h2 id="ide-configuration"><a href="#ide-configuration" class="header-anchor">#</a> IDE Configuration</h2> <p>Remember that you should include another folder to the project/workspace of your IDE. I suggest that you add your vendor name directory from the vendors folder so your <em>inteli</em> services don't make your IDE light up red all over the place 😉</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/laravel-blueprint/assets/js/app.0033eac8.js" defer></script><script src="/laravel-blueprint/assets/js/2.b1f69f24.js" defer></script><script src="/laravel-blueprint/assets/js/10.199ee8ed.js" defer></script>
+  </body>
+</html>
