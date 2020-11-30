@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -33,5 +35,22 @@ class Handler extends ExceptionHandler
     public function register()
     {
         //
+    }
+
+    /**
+     * Report exceptions to sentry.
+     *
+     * @param Throwable $Exception
+     * @return void
+     * @throws BindingResolutionException
+     * @throws Throwable
+     */
+    public function report(Throwable $Exception)
+    {
+        if ($this->shouldReport($Exception) && app()->bound('sentry')) {
+            app('sentry')->captureException($Exception);
+        }
+    
+        parent::report($Exception);
     }
 }

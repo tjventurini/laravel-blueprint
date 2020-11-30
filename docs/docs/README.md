@@ -86,7 +86,7 @@ php artisan app:install --refresh --seed --demo
 
 ### xDebug
 
-Checkout the following page if you want to use xdebug to debug your application.
+Check out the following page if you want to use xdebug to debug your application.
 
 - [xDebug](/docs/xdebug/)
 
@@ -95,3 +95,9 @@ Checkout the following page if you want to use xdebug to debug your application.
 Check out the following page if you want to use Laravel Blueprint for local package development.
 
 - [Package Development](/docs/package-development/)
+
+### Exception Handling
+
+The blueprint comes with a setup for sentry and includes client save graphql exceptions. Check out the documentation to learn more about it.
+
+- [Exception Handling](/docs/docs/exception-handling/)

@@ -20,6 +20,7 @@
         "laravel/tinker": "^2.0",
         "nuwave/lighthouse": "^4.17",
         "orchid/platform": "^9.7",
+        "sentry/sentry-laravel": "^2.2",
         "tjventurini/ddi": "^1.0.0",
         "tjventurini/graphql-exceptions": "^0.0.2"
     },
