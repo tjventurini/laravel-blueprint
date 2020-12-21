@@ -1,3 +1,0 @@
-[submodule "laradock"]
-	path = laradock
-	url = git@github.com:tjventurini/laradock-blueprint.git
