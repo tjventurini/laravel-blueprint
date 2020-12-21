@@ -27,12 +27,14 @@ upgrade:
 	@git fetch blueprint
 	@git checkout $(UPDATE_MAIN_BRANCH)
 	@git merge blueprint/$(UPDATE_MAIN_BRANCH)
+	@git remote remove blueprint
 # upgrade the project against laravel
 upgrade-laravel: 
 	@git remote add laravel git@github.com:laravel/laravel.git
 	@git fetch laravel
 	@git checkout $(UPDATE_MAIN_BRANCH)
 	@git merge laravel/$(UPDATE_MAIN_BRANCH)
+	@git remote remove laravel
 
 ########################################
 # laradock
