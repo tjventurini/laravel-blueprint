@@ -62,6 +62,12 @@ composer-update:
 # dump composer autoload
 composer-dump:
 	@cd ./laradock && docker-compose exec --user=laradock workspace composer dump
+# run any composer command
+composer:
+	@cd ./laradock && docker-compose exec --user=laradock workspace composer $(filter-out $@,$(MAKECMDGOALS))
+# execute any artisan command
+# artisan:
+# 	@cd ./laradock && docker-compose exec --user=laradock workspace php artisan $(filter-out $@,$(MAKECMDGOALS))
 # refresh the application
 refresh:
 	@cd ./laradock && docker-compose down
