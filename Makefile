@@ -4,7 +4,7 @@
 # the list of containers to work with
 CONTAINERS=nginx php-fpm mysql workspace
 # the branch to pull updates form
-UPDATE_MAIN_BRANCH=8.x
+UPDATE_MAIN_BRANCH=master
 # time that we give the containers to boot before we proceed with the setup 
 WAITING_TIME=10
 
