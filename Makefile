@@ -4,7 +4,7 @@
 # the list of containers to work with
 CONTAINERS=nginx php-fpm mysql workspace
 # the branch to pull updates form
-UPDATE_MAIN_BRANCH=master
+UPDATE_MAIN_BRANCH=8.x
 # time that we give the containers to boot before we proceed with the setup 
 WAITING_TIME=10
 
@@ -21,12 +21,18 @@ init:
 	@sleep $(WAITING_TIME)
 	@cd ./laradock && docker-compose exec --user=laradock workspace composer install
 	@echo "The laravel-blueprint setup is up and running 🚀"
-# upgrade the project 
+# upgrade the project against the blueprint
 upgrade: 
 	@git remote add blueprint git@github.com:tjventurini/laravel-blueprint.git
 	@git fetch blueprint
 	@git checkout $(UPDATE_MAIN_BRANCH)
 	@git merge blueprint/$(UPDATE_MAIN_BRANCH)
+# upgrade the project against laravel
+upgrade-laravel: 
+	@git remote add laravel git@github.com:laravel/laravel.git
+	@git fetch laravel
+	@git checkout $(UPDATE_MAIN_BRANCH)
+	@git merge laravel/$(UPDATE_MAIN_BRANCH)
 
 ########################################
 # laradock
